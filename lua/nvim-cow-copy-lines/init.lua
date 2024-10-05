@@ -14,7 +14,7 @@ function CowLineCopy(args)
 	local currentDir = vim.fn.getcwd()
 	local currentFilePath = vim.fn.expand('%')
 	local repoName = string.match(currentDir, ".+/(.+)")
-  local branchName = vim.fn.system('git rev-parse --abbrev-ref HEAD')
+	local branchName = vim.fn.system('git rev-parse --abbrev-ref HEAD')
 	branchName = string.gsub(branchName, "\n$", "")
 	local lineRange = line_start .. "-" .. line_end
 	local fileType = vim.bo.filetype
@@ -25,12 +25,12 @@ function CowLineCopy(args)
 	end
 
 	local output = table.concat({
-    "Repo: `" .. repoName .. "`\n",
-    "Branch: `" .. branchName .. "`\n",
-    "Line: " .. lineRange .. "\n",
-    "File: `" .. currentFilePath .. "`\n",
-    "Code: \n",
-    "```" .. fileType .. "\n",
+		"Repo: `" .. repoName .. "`\n",
+		"Branch: `" .. branchName .. "`\n",
+		"Line: " .. lineRange .. "\n",
+		"File: `" .. currentFilePath .. "`\n",
+		"Code: \n",
+		"```" .. fileType .. "\n",
 		code,
 		"```"
 	})
