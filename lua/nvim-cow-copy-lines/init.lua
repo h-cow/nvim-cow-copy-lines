@@ -25,12 +25,14 @@ function CowLineCopy(args)
 	end
 
 	local output = table.concat({
-    "Repo: `" .. repoName .. "`",
-    "Branch: `" .. branchName .. "`",
-    "Line: " .. lineRange,
-    "File: `" .. currentFilePath .. "`",
-    "Code: ",
-    "```" .. fileType .. "\n" .. code .. "```"
+    "Repo: `" .. repoName .. "`\n",
+    "Branch: `" .. branchName .. "`\n",
+    "Line: " .. lineRange .. "\n",
+    "File: `" .. currentFilePath .. "`\n",
+    "Code: \n",
+    "```" .. fileType .. "\n",
+		code,
+		"```"
 	})
 
 	vim.fn.setreg("+", output, "c")
