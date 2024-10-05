@@ -33,8 +33,8 @@ Install using [lazy.nvim](https://github.com/folke/lazy.nvim)
 {
     "h-cow/nvim-cow-copy-lines",
     config = function()
-        vim.keymap.set('n', '<leader>ccl', ':CowLineCopy<CR>', {desc = "Code Copy Line"})
-        vim.keymap.set('v', '<leader>ccl', ':CowLineCopy<CR>', {desc = "Code Copy Line"})
+        vim.keymap.set('n', '<leader>cl', ':CowLineCopy<CR>', {desc = "Copy Line"})
+        vim.keymap.set('v', '<leader>cl', ':CowLineCopy<CR>', {desc = "Copy Line"})
     end,
 },
 ```
