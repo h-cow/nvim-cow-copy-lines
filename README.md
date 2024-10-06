@@ -4,10 +4,15 @@ Use a keyboard shortcut to copy the highlighted lines of code but on the clipboa
 
 ## Example of the output
 Repo: `nvim-cow-copy-lines`
+
 Branch: `main`
+
 Line: 47-56
+
 File: `lua/nvim-cow-copy-lines/init.lua`
+
 Code: 
+
 ```lua
 	local output = table.concat({
 		"Repo: `" .. repoName .. "`\n",
