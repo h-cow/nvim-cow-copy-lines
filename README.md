@@ -1,22 +1,24 @@
 # nvim-cow-copy-lines
 Use a keyboard shortcut to copy the highlighted lines of code but on the clipboard create a format that is easier for humans to understand.
+![Uploading Copy Line Info.gif…]()
 
 ## Example of the output
-Repo: `nvim-cow-commenter`
+Repo: `nvim-cow-copy-lines`
 Branch: `main`
-Line: 48-56
-File: `lua/nvim-cow-commenter/init.lua`
+Line: 47-56
+File: `lua/nvim-cow-copy-lines/init.lua`
 Code: 
 ```lua
-				lineNumber = lineNumber + 1
-			end
-		end
-	else
-		print("fileType not supported for comment toggle")
-	end
-end
-
-vim.api.nvim_create_user_command('CowCommentToggle', ToggleComments, {range = true})
+	local output = table.concat({
+		"Repo: `" .. repoName .. "`\n",
+		"Branch: `" .. branchName .. "`\n",
+		"Line: " .. lineRange .. "\n",
+		"File: `" .. currentFilePath .. "`\n",
+		"Code: \n",
+		"```" .. fileType .. "\n",
+		code,
+		"```"
+	})
 ```
 
 ## Why
