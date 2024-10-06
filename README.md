@@ -1,6 +1,7 @@
 # nvim-cow-copy-lines
 Use a keyboard shortcut to copy the highlighted lines of code but on the clipboard create a format that is easier for humans to understand.
-![Uploading Copy Line Info.gif…]()
+![Copy Line Info Small](https://github.com/user-attachments/assets/7a01c481-a91c-4dbd-9fd9-4b4b16ed1dc0)
+
 
 ## Example of the output
 Repo: `nvim-cow-copy-lines`
