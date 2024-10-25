@@ -45,12 +45,12 @@ function CowLineCopy(args)
 	end
 
 	local output = table.concat({
-		"Repo: `" .. repoName .. "`\n",
-		"Branch: `" .. branchName .. "`\n",
-		"Line: " .. lineRange .. "\n",
-		"File: `" .. currentFilePath .. "`\n",
-		"Code: \n",
-		"```" .. fileType .. "\n",
+		"Repo: `" .. repoName .. "`  \n",
+		"Branch: `" .. branchName .. "  \n",
+		"Line: " .. lineRange .. "  \n",
+		"File: `" .. currentFilePath .. "  \n",
+		"Code:   \n",
+		"```" .. fileType .. "  \n",
 		code,
 		"```"
 	})
